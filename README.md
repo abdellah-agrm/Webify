@@ -40,12 +40,10 @@ Built with **Python**, **CustomTkinter**, and Google's official **`libwebp`** en
    ```bash
    pip install -r requirements.txt
    ```
-   *or double-click `install_requirements.bat` on Windows.*
 3. Run the application:
    ```bash
    python app.py
    ```
-   *or double-click `run_app.bat` on Windows.*
 
 ---
 
