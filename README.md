@@ -38,8 +38,9 @@ Built with **Python**, **CustomTkinter**, and Google's official **`libwebp`** en
    ```
 2. Install dependencies:
    ```bash
-   pip install customtkinter pillow tkinterdnd2 darkdetect
+   pip install -r requirements.txt
    ```
+   *or double-click `install_requirements.bat` on Windows.*
 3. Run the application:
    ```bash
    python app.py
