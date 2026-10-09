@@ -34,6 +34,9 @@ def generate_slug(text: str) -> str:
     if not text:
         return "image"
 
+    # Strip common image extensions if user pasted a filename (e.g. photo.jpg -> photo)
+    text = re.sub(r"\.(webp|png|jpe?g|gif|bmp|tiff|svg)$", "", text.strip(), flags=re.IGNORECASE)
+
     # Step 1: Replace explicit symbols and ligatures
     for symbol, replacement in SYMBOL_REPLACEMENTS.items():
         text = text.replace(symbol, replacement)

@@ -1,73 +1,114 @@
-# ⚡ Webify — Modern WebP Image Optimizer & SEO Slug Generator
+# ⚡ Webify
 
 <p align="center">
-  <img src="generative-image.png" alt="Webify Logo" width="128" height="128">
+  <img src="generative-image.png" alt="Webify Logo" width="120" />
 </p>
 
-**Webify** is a high-performance, dark-themed Windows desktop application for fast, quality-controlled WebP image conversion and automated SEO slug renaming.
+<p align="center">
+  <b>Modern WebP Image Optimizer & SEO Slug Generator</b><br>
+  <i>Optimiseur d'images WebP & Générateur de Slugs SEO</i><br>
+  <i>أداة تحسين وضغط صور WebP وتوليد روابط الـ SEO</i>
+</p>
 
-Built with **Python**, **CustomTkinter**, and Google's official **`libwebp`** engine via **Pillow**, Webify allows web developers, designers, and content managers to compress images by up to 85%+ while maintaining visual quality.
+<p align="center">
+  <a href="#-english">English</a> •
+  <a href="#-français">Français</a> •
+  <a href="#-العربية">العربية</a>
+</p>
 
----
-
-## ✨ Features
-
-- 🎨 **Modern Dark Mode Interface**: Built with CustomTkinter for a sleek, responsive slate-dark theme (`#14161f`).
-- 🎚 **Dynamic Quality Bar (1% – 100%)**: Interactive quality slider with visual indicators (*Low Size*, *Balanced Web*, *High Quality*) + a 100% **Lossless Mode** toggle.
-- 📐 **Aspect-Ratio Locked Resizing (px)**: Enter Width or Height in pixels—the other dimension automatically calculates in real-time to prevent image stretching or distortion. Quick presets available for `Original`, `1920px (FHD)`, `1280px (HD)`, and `800px (Web)`.
-- 🔤 **Unicode SEO Slug Generator**: Automatically transforms titles and filenames with special characters, French accents, and symbols into clean web slugs.
-  - *Example*: `"CONSTRUCTION & GROS ŒUVRE"` ➔ `"construction-and-gros-oeuvre.webp"`
-- 📂 **Multi-File & Folder Drag & Drop**: Process single files, batch image selections, or entire folder trees with file queue drag-and-drop support.
-- 📁 **Custom Export Directory**: Set custom output folders (default: `C:\Users\...\Downloads`) with a built-in **Open Folder** button.
-- ⚡ **EXIF Metadata Stripping**: Strips camera metadata by default for maximum size reduction.
-- 🚀 **Multi-Threaded Queue**: Background processing keeps the UI completely smooth and responsive during batch conversions.
+<p align="center">
+  <img src="Webify-screenshot.png" alt="Webify Screenshot" width="800" />
+</p>
 
 ---
 
-## 💻 Installation & Usage
+## 🇬🇧 English
 
-### Option 1: Standalone Executable (Windows)
-1. Download `Webify.exe` from the `dist/` directory.
-2. Double-click **`Webify.exe`** to launch immediately—no Python installation required!
+### Overview
+**Webify** is a fast, lightweight Windows desktop application designed to convert images to the modern **WebP** format, reduce file size by up to 85%+, and automatically generate clean, SEO-friendly file names.
 
-### Option 2: Run from Python Source
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abdellah-agrm/Webify.git
-   cd Webify
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the application:
-   ```bash
-   python app.py
-   ```
+### ✨ Key Features
+- ⚡ **High-Efficiency WebP Conversion**: Compress images with minimal quality loss (includes a 100% Lossless mode and quality slider).
+- 🔤 **SEO Slug Generator**: Automatically cleans up special characters, accents, and symbols into clean web slugs (e.g. `Été 2024 & Plage!` ➔ `ete-2024-and-plage.webp`).
+- 📐 **Smart Resizing**: Aspect-ratio locked resizing with instant presets (Original, FHD, HD, Web).
+- 📂 **Drag & Drop / Batch Processing**: Drop individual images or entire folders to convert in bulk.
+- 🚀 **Portable & Fast**: Standalone executable (`.exe`) with no installation required.
 
----
+### 🚀 Getting Started
 
-## 🛠 Building the Executable
+#### Option 1: Standalone App (Recommended)
+1. Download `Webify.exe` from the `dist/` folder or Releases.
+2. Double-click **`Webify.exe`** to start immediately.
 
-To compile a standalone `.exe` binary with embedded Tcl/Tk data assets and app icon:
-
+#### Option 2: Run with Python
 ```bash
-python build_exe.py
+git clone https://github.com/abdellah-agrm/Webify.git
+cd Webify
+pip install -r requirements.txt
+python app.py
 ```
 
-The output binary will be generated at `dist/Webify.exe`.
+---
+
+## 🇫🇷 Français
+
+### Présentation
+**Webify** est une application de bureau Windows rapide et légère conçue pour convertir vos images au format moderne **WebP**, réduire leur poids jusqu'à plus de 85%, et renommer automatiquement vos fichiers avec des slugs optimisés pour le référencement naturel (SEO).
+
+### ✨ Fonctionnalités
+- ⚡ **Conversion WebP haute performance** : Compressez vos images tout en préservant leur qualité visuelle (curseur de qualité + mode sans perte 100%).
+- 🔤 **Générateur de Slugs SEO** : Nettoie automatiquement les accents, symboles et espaces (ex. : `Été 2024 & Plage!` ➔ `ete-2024-and-plage.webp`).
+- 📐 **Redimensionnement intelligent** : Verrouillage automatique du ratio pour éviter toute déformation, avec préréglages rapides (FHD, HD, Web).
+- 📂 **Glisser-Déposer & Traitement par lot** : Déposez des fichiers individuels ou des dossiers complets.
+- 🚀 **Portable et autonome** : Fichier exécutable (`.exe`) prêt à l'emploi sans installation requise.
+
+### 🚀 Démarrage rapide
+
+#### Option 1 : Application autonome (Recommandé)
+1. Téléchargez `Webify.exe` dans le dossier `dist/` ou la section Releases.
+2. Double-cliquez sur **`Webify.exe`** pour lancer l'application.
+
+#### Option 2 : Lancement avec Python
+```bash
+git clone https://github.com/abdellah-agrm/Webify.git
+cd Webify
+pip install -r requirements.txt
+python app.py
+```
 
 ---
 
-## ⚙️ Tech Stack
+<div dir="rtl">
 
-- **GUI Framework**: [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
-- **Image Processing Engine**: [Pillow](https://python-pillow.org/) (Google `libwebp` library wrapper)
-- **Drag & Drop**: [tkinterdnd2](https://github.com/pmgagne/tkinterdnd2)
-- **Packaging**: [PyInstaller](https://pyinstaller.org/)
+## 🇸🇦 العربية
+
+### نبذة عن البرنامج
+**Webify** هو تطبيق خفيف وسريع لأنظمة ويندوز مخصص لتحويل الصور وضغطها إلى صيغة **WebP** الحديثة، مما يقلل حجم الملفات بنسبة تتجاوز 85% مع توليد أسماء ملفات نظيفة ومهيأة لمحركات البحث (SEO).
+
+### ✨ المميزات الرئيسية
+- ⚡ **تحويل فائق السرعة إلى WebP**: ضغط قوي للصور مع الحفاظ على وضوحها (شريط تحكم في الجودة + خيار ضغط بدون فقدان Lossless).
+- 🔤 **توليد أسماء مهيأة للـ SEO**: تحويل الحروف الخاصة والرموز تلقائياً إلى روابط ويب نظيفة (مثال: `Été 2024 & Plage!` ➔ `ete-2024-and-plage.webp`).
+- 📐 **تغيير الأبعاد مع الحفاظ على النسبة**: حساب تلقائي وفوري للأبعاد لمنع تشوه الصور مع مقاسات جاهزة (FHD، HD، Web).
+- 📂 **السحب والإفلات والمعالجة الجماعية**: إمكانية سحب الصور المنفردة أو مجلدات كاملة ومعالجتها دفعة واحدة.
+- 🚀 **برنامج محمول وسريع**: ملف تنفيذي مباشر (`.exe`) يعمل دون الحاجة لتثبيت أي برامج إضافية.
+
+### 🚀 طريقة التشغيل
+
+#### الخيار الأول: تشغيل البرنامج الجاهز (موصى به)
+1. حمّل ملف **`Webify.exe`** من مجلد `dist/` أو قسم الإصدارات (Releases).
+2. انقر نقراً مزدوجاً على **`Webify.exe`** لبدء الاستخدام مباشرة.
+
+#### الخيار الثاني: التشغيل عبر Python
+```bash
+git clone https://github.com/abdellah-agrm/Webify.git
+cd Webify
+pip install -r requirements.txt
+python app.py
+```
+
+</div>
 
 ---
 
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+## 📄 License
+MIT License.

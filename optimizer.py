@@ -138,7 +138,8 @@ def optimize_to_webp(
                 # Avoid overwriting unless it's the exact same target path being re-optimized
                 if dest_path.resolve() == input_file.resolve():
                     dest_path = out_dir_path / f"{slug_base}-opt.webp"
-                    break
+                    if not dest_path.exists():
+                        break
                 dest_path = out_dir_path / f"{slug_base}-{counter}.webp"
                 counter += 1
 
@@ -153,6 +154,24 @@ def optimize_to_webp(
             if not lossless:
                 # Retain color exactness where possible
                 save_kw["exact"] = False
+
+            # Preserve EXIF metadata if strip_exif is disabled
+            if not strip_exif:
+                raw_exif = img.info.get("exif")
+                if raw_exif:
+                    save_kw["exif"] = raw_exif
+                else:
+                    try:
+                        exif_obj = img.getexif()
+                        if exif_obj and len(exif_obj) > 0:
+                            save_kw["exif"] = exif_obj
+                    except Exception:
+                        pass
+
+            # Preserve color profile (ICC) if available
+            icc = img.info.get("icc_profile")
+            if icc:
+                save_kw["icc_profile"] = icc
 
             img.save(str(dest_path), **save_kw)
 
